@@ -24,6 +24,10 @@ exports.getUser = async (req, res) => {
   }
 };
 
+exports.home = async (req, res) => {  
+  res.json("Hello from home path");
+};
+
 //UPDATE USER
 exports.updateUser = async (req, res) => {
   try {
