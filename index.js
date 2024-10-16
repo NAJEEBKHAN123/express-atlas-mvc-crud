@@ -13,9 +13,9 @@ const app = express();
 app.use(express.json())
 app.use(cors());
 app.get("/" , (req, res)=>{
-    res.json("Hellow from server");
+    res.json("Hellow from serverrrr");
 })
-app.use("/api", userRoutes)
+app.use("/api/users", userRoutes)
 
 const mongoUrl = process.env.ATLAS_API_KEY;
 
