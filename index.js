@@ -12,7 +12,9 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json())
 app.use(cors());
-
+app.get("/" , (req, res)=>{
+    res.json("Hellow from server");
+})
 app.use("/api", userRoutes)
 
 const mongoUrl = process.env.ATLAS_API_KEY;

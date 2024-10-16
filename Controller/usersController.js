@@ -1,9 +1,7 @@
 const User = require("../models/users");
 
 
-exports.home = async(req, res) =>{
-  res.send("this is home page")
-}
+
 //CREATE USERS
 exports.createUser = async (req, res) => {
   const { name, email, age } = req.body;
