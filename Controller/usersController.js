@@ -1,12 +1,16 @@
 const User = require("../models/users");
 
+
+exports.home = async(req, res) =>{
+  res.send("this is home page")
+}
 //CREATE USERS
 exports.createUser = async (req, res) => {
   const { name, email, age } = req.body;
   try {
     const newUser = new User({ name, email, age });
     const saveUser = await newUser.save();
-    res.status(200).json({ message: "create new user", data: newUser });
+    res.status(200).json({ message: "create new user", data: saveUser });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "error in creating user" });
