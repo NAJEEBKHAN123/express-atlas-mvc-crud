@@ -20,7 +20,7 @@ const mongoUrl = process.env.ATLAS_API_KEY;
 mongoose.connect(mongoUrl).then(() =>{
     console.log("mongodb connect successful")
 }).catch((err) =>{
-    console.log(err)
+    console.log('error in mongodb connection',err)
 })
 
 
